@@ -29,12 +29,12 @@
     </div>
 
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+      class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
       style="direction: rtl"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="./img/logo.png" alt="logo" style="width: 100px" />
+          <img src="./img/logo.png" alt="logo" class="logoSize" />
         </a>
         <button
           class="navbar-toggler"
@@ -59,7 +59,7 @@
     </nav>
 
     <section
-      class="container-fluid row my-lg-3 my-md-3 my-sm-1 p-0 mx-auto backPic herosection"
+      class="container-fluid row p-0 mx-auto backPic herosection"
      
     >
       <div
@@ -192,8 +192,8 @@
       </div>
     </section>
 
-    <section class="container-fluid d-flex align-items-center justify-content-center" style="height: 100vh;">
-      <div class="row container mx-auto my-lg-5 my-md-3 my-sm-1">
+    <section class="container-fluid d-flex align-items-center justify-content-center p-md-0" style="height: 100vh;">
+      <div class="row container p-md-0 mx-auto my-lg-5 my-md-3 my-sm-1">
       <swiper-container
         class="mySwiper swiper-container col-lg-7 col-md-12"
         pagination="true"
@@ -289,54 +289,56 @@
           />
         </swiper-slide>
       </swiper-container>
+
+
+
       <div class="col-lg-4 col-md-12">
         <div
-          class="h-100 py-lg-5 py-md-3 py-sm-1 text-center bg-body-tertiary rounded-3 shadow-lg"
+          class="h-100 py-5 text-center bg-body-tertiary rounded-3 shadow-lg"
         >
-          <h1 class="text-body-emphasis">Jumbotron with icon</h1>
+          <p class="fw-bold fs-1 text-body-tertiary">نماذج للأعمال الفنية المعروضة</p>
           <p class="col-lg-8 mx-auto fs-5 text-muted">
-            This is a custom jumbotron featuring an SVG image at the top, some
-            longer text that wraps early thanks to a responsive
-            <code>.col-*</code> class, and a customized call to action.
+            يمكنك من مشاهدة نماذج للأعمال الفنية المعروضة في نادي العلوم وتصفحها وتحميلها
+            في جهازك بكل سهولة وسرعة 
           </p>
         </div>
       </div>
     </div>
     </section>
-<section class="grid-container container">
+<section class="grid-container container" style="margin-top: 2rem;">
   <div class="grid-item d-flex justify-content-center align-items-center p1 position-relative">
-    <button type="button" class="btn btn-outline-light text-dark fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+    <button type="button" class="btn btn-outline-light text-dark bg-body-tertiary fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
   عرض 
 </button>
     
     <img src="./img/h1.jpg" class="fit"  alt=""></div>
   <div class="grid-item d-flex justify-content-center align-items-center p2 position-relative">
-    <button type="button" class="btn btn-outline-light text-dark fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+    <button type="button" class="btn btn-outline-light text-dark bg-body-tertiary fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
   عرض
     </button>
     <img src="./img/h2.jpg" class="h-100 w-100 fit" alt=""></div>
   <div class="grid-item d-flex justify-content-center align-items-center p3 position-relative">
-    <button type="button" class="btn btn-outline-light text-dark fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+    <button type="button" class="btn btn-outline-light text-dark bg-body-tertiary fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
   عرض
     </button>
     <img src="./img/h3.jpg" class="h-100 w-100 fit" alt=""></div>
   <div class="grid-item d-flex justify-content-center align-items-center p4 position-relative">
-    <button type="button" class="btn btn-outline-light text-dark fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+    <button type="button" class="btn btn-outline-light text-dark bg-body-tertiary fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
   عرض
     </button>
     <img src="./img/h4.png" class="h-100 w-100 fit" alt=""></div>
   <div class="grid-item d-flex justify-content-center align-items-center p5 position-relative">
-    <button type="button" class="btn btn-outline-light text-dark fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">
+    <button type="button" class="btn btn-outline-light text-dark bg-body-tertiary fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">
   عرض
     </button>
     <img src="./img/h5.jpg" class="h-100 w-100 fit" alt=""></div>
   <div class="grid-item d-flex justify-content-center align-items-center p6 position-relative">
-    <button type="button" class="btn btn-outline-light text-dark fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">
+    <button type="button" class="btn btn-outline-light text-dark bg-body-tertiary fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">
   عرض
     </button>
     <img src="./img/h6.jpg" class="h-100 w-100 fit" alt=""></div>
   <div class="grid-item d-flex justify-content-center align-items-center p7 position-relative">
-    <button type="button" class="btn btn-outline-light text-dark fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop7">
+    <button type="button" class="btn btn-outline-light text-dark bg-body-tertiary fs-5" style="position: absolute; top: 20px; right: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop7">
   عرض
     </button>
     <img src="./img/s2.jpg" class="h-100 w-100 fit" alt=""></div>
@@ -472,7 +474,7 @@
     </div>
   </div>
 </div>
-    <section
+    <!-- <section
       class="container-fluid p-0 back2 mt-lg-5 mt-md-2 mt-sm-1 mb-lg-3 mb-md-1"
       style="height: 100vh"
     >
@@ -504,9 +506,13 @@
           class="product-device product-device-2 shadow-sm d-none d-md-block"
         ></div>
       </div>
-    </section>
+    </section> -->
 
-    <div class="swiper container">
+  <section class="container row p-md-0 mx-auto" >
+        <div class="col-6">ssssssssssssssssss</div>
+
+   <div class="col-6">
+       <div class="swiper container">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper align-items-center">
         <!-- Slides -->
@@ -536,6 +542,8 @@
       <!-- If we need scrollbar -->
       <div class="swiper-scrollbar"></div>
     </div>
+   </div>
+  </section>
 
     <!-- <div class="container my-lg-5 my-md-3 my-sm-1">
       <div
@@ -709,6 +717,24 @@
         </div>
       </div>
     </div> -->
+    <section class="container-fluid p-0 my-lg-5 my-md-3 my-sm-1">
+
+    <div class="card text-bg-dark h-100">
+            <video class="card-img" src="./ved/0_Abstract_Geometric_3840x2160.mp4" style="object-fit: fill;"  autoplay loop  contenteditable="false"></video>
+
+  <div class="card-img-overlay m-lg-5 m-md-3 m-sm-1" style="direction: rtl;">
+    <h5 class="card-title">الإبداع</h5>
+    <p class="card-text"> ورش عمل </p>
+    <p class="card-text">تحت إشراف مجموعة من الفنانين المحترفين</p>
+    <p class="card-text">تاريخ البدء: 1 يناير 2023</p>
+    <p class="card-text">تاريخ الانتهاء: 31 ديسمبر 2023</p>
+    <p class="card-text">الموقع: مركز الفنون</p>
+  </div>
+</div>
+
+    </section>
+
+
 
     <div class="d-block" style="height: 100vh">
       <div
@@ -1062,7 +1088,7 @@
 
 
 
-<video src="./ved/0_Abstract_Geometric_3840x2160.mp4" style="width: 100%;" autoplay loop contenteditable="false"></video>
+
 
 
 
