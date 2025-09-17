@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+        <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.3.7/dist/photoswipe.css">
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>جاليري الفن التشكيلي / دورات</title>
+  </head>
+  <body class="position-relative">
+    <div
+      class="position-fixed top-50 end-0 z-3 m-5 d-flex flex-column gap-3 clicker"
+    >
+      <img src="./img/up-right-from-square.png" width="30px" alt="" />
+      <div class="d-flex flex-column gap-2 opacity-0">
+        <img src="./img/face-book.png" width="30px" alt="" />
+        <img src="./img/twitter.png" width="30px" alt="" />
+        <img src="./img/telegram.png" width="30px" alt="" />
+      </div>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
+      style="direction: rtl"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" alt="logo" class="logoSize" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="./index.html">الرئيسية</a>
+            <a class="nav-link " href="./exhibition.html" >المعرض</a>
+            <a class="nav-link" href="./cources.html">الدورات المتاحة</a>
+            <a class="nav-link" href="./ourChannel.html"> قناة الفنان ايمن الجوهري</a>
+            <a class="nav-link" href="./about.html">عن الفنان ايمن الجوهري</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <section class="container mt-5 pt-5" style="direction: rtl;">
+        <h2 class="text-center my-5">معرض الأعمال الفنية</h2>
+
+ <div class="d-flex flex-wrap gap-3 justify-content-evenly">
+   <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="./img/4811.jpg" itemprop="contentUrl" data-size="1000x667">
+            <img src="./img/4811.jpg" width="300" height="200" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Image Title, 2023</figcaption>
+      </figure>
+      <!-- ... more figures ... -->
+      <figure itemprop="associatedMedia" style="display: none;" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="./img/6eed0bd0-3375-4fac-88ce-e6ed7fd9cba8.jpg" itemprop="contentUrl" data-size="1000x667">
+            <img src="./img/6eed0bd0-3375-4fac-88ce-e6ed7fd9cba8.jpg" width="300" height="200" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Image Title, 2023</figcaption>
+      </figure>
+   </div>
+
+ <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="./img/4811.jpg" itemprop="contentUrl" data-size="1000x667">
+            <img src="./img/4811.jpg" width="300" height="200" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Image Title, 2023</figcaption>
+      </figure>
+      <!-- ... more figures ... -->
+      <figure itemprop="associatedMedia" style="display: none;" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="./img/6eed0bd0-3375-4fac-88ce-e6ed7fd9cba8.jpg" itemprop="contentUrl" data-size="1000x667">
+            <img src="./img/6eed0bd0-3375-4fac-88ce-e6ed7fd9cba8.jpg" width="300" height="200" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Image Title, 2023</figcaption>
+      </figure>
+   </div>
+
+
+
+ </div>
+
+
+    </section>
+
+
+
+<script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.3.7/dist/photoswipe-lightbox.esm.js';
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '.my-gallery',
+      children: 'a',
+      pswpModule: () => import('https://unpkg.com/photoswipe@5.3.7/dist/photoswipe.esm.js')
+    });
+    lightbox.init();
+  </script>
+
+
+
+
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          draggable: true,
+        },
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      class="astro-vvvwv3sm"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+      crossorigin="anonymous"
+      async
+    ></script>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
