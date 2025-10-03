@@ -911,3 +911,13 @@ a.a51 {
   list-style-type: none;
   text-decoration: none;
 }
+
+
+.cart-hover:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.5s ease-in-out;
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.5s ease-in-out;
+    -o-transition: box-shadow 0.5s ease-in-out;
+}
