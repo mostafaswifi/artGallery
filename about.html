@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>جاليري الفن التشكيلي / عن الفنان</title>
+    <style>
+      .hero-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      
+      .nav-link {
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+      
+      .nav-link:hover {
+        background-color: #f8f9fa;
+        border-radius: 0.375rem;
+        color: #0d6efd !important;
+      }
+      
+      .artist-img {
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+      }
+      
+      .artist-img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      }
+      
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+      
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+      
+      .social-btn {
+        transition: all 0.3s ease;
+      }
+      
+      .social-btn:hover {
+        transform: scale(1.1);
+      }
+      
+      .footer-link {
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border-radius: 0.375rem;
+      }
+      
+      .footer-link:hover {
+        background-color: rgba(255,255,255,0.1);
+        color: #fff !important;
+      }
+      
+      .timeline {
+        position: relative;
+        padding: 20px 0;
+      }
+      
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #667eea, #764ba2);
+        transform: translateX(-50%);
+      }
+      
+      .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+      }
+      
+      .timeline-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        position: relative;
+      }
+      
+      .timeline-content::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background: #667eea;
+        border-radius: 50%;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-content::before {
+        right: -40px;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-content::before {
+        left: -40px;
+      }
+      
+      .initiative-card {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      
+      .initiative-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+    </style>
+  </head>
+
+  <body class="position-relative">
+    <!-- Social Media Floating Button -->
+    <div class="position-fixed top-50 start-0 z-3 m-3 d-flex flex-column gap-3">
+      <button class="btn btn-primary rounded-circle p-3 social-btn" type="button" data-bs-toggle="collapse" data-bs-target="#socialCollapse">
+        <i class="bi bi-share-fill fs-5"></i>
+      </button>
+      <div class="collapse" id="socialCollapse">
+        <div class="d-flex flex-column gap-2">
+          <a href="#" class="btn btn-outline-primary rounded-circle p-2 social-btn">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-outline-info rounded-circle p-2 social-btn">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="#" class="btn btn-outline-primary rounded-circle p-2 social-btn">
+            <i class="bi bi-telegram"></i>
+          </a>
+          <a href="#" class="btn btn-outline-danger rounded-circle p-2 social-btn">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="./index.html">
+          <img src="./img/logo.png" alt="logo" width="50" height="50" class="me-2" />
+          <span class="fw-bold text-primary">جاليري الفن التشكيلي</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./index.html">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./exhibition.html">المعرض</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./cources.html">الدورات المتاحة</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="https://www.facebook.com/10thScienceClub" target="_blank">
+                نادي العلوم على فيس بوك
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active px-3" href="./about.html">عن الفنان أيمن الجوهري</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./contact.html">تواصل معنا</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="./cources.html" class="btn btn-outline-primary me-2">
+              سجل في الدورات
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white" style="padding-top: 100px;">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="text-center text-lg-start">
+              <h1 class="display-4 fw-bold mb-4">الفنان أيمن الجوهري</h1>
+              <p class="lead mb-4">فنان تشكيلي متميز ورائد في مجال الفنون البصرية، يجمع بين الأصالة والحداثة في أعماله الفنية المتميزة</p>
+              <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                <a href="#biography" class="btn btn-light btn-lg fw-bold px-4">
+                  <i class="bi bi-person-vcard me-2"></i>السيرة الفنية
+                </a>
+                <a href="./exhibition.html" class="btn btn-outline-light btn-lg fw-bold px-4">
+                  <i class="bi bi-images me-2"></i>استكشف الأعمال
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div class="feature-icon">
+              <i class="bi bi-palette2 text-white display-6"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biography" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img src="./img/ayman main.jpg" alt="الفنان أيمن الجوهري" class="img-fluid artist-img w-100" style="max-height: 600px; object-fit: cover;">
+          </div>
+          <div class="col-lg-6">
+            <div class="ps-lg-5">
+              <h2 class="fw-bold text-primary mb-4">سيرة الفنان</h2>
+              <p class="text-muted mb-4">
+                الفنان التشكيلي أيمن الجوهري هو فنان مصري معاصر معروف بأعماله الفنية التي تجمع بين الأساليب التقليدية والحديثة. يتميز أيمن الجوهري بقدرته على التعبير عن المشاعر والأفكار من خلال لوحاته التي تتنوع بين الرسم الزيتي، الأكريليك، والفنون الرقمية.
+              </p>
+              <p class="text-muted mb-4">
+                بدأ أيمن الجوهري مسيرته الفنية في أوائل العقد الأول من القرن الحادي والعشرين، حيث شارك في العديد من المعارض المحلية والدولية. تتميز أعماله بالتنوع في المواضيع والأساليب، مما يعكس اهتمامه بالتجريب والابتكار في الفن.
+              </p>
+              <p class="text-muted mb-4">
+                بالإضافة إلى عمله كفنان، يشارك أيمن الجوهري في تعليم الفن من خلال ورش العمل والدورات التدريبية التي يقدمها للفنانين الناشئين والهواة. يهدف من خلال هذه الدورات إلى نقل خبراته ومعرفته الفنية إلى الأجيال الجديدة، مما يسهم في تطوير المشهد الفني المحلي.
+              </p>
+              <div class="d-flex gap-3">
+                <a href="./exhibition.html" class="btn btn-primary">
+                  <i class="bi bi-images me-2"></i>معرض الأعمال
+                </a>
+                <a href="./cources.html" class="btn btn-outline-primary">
+                  <i class="bi bi-book me-2"></i>الدورات التدريبية
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Initiative Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold text-primary mb-3">مبادرة "جمل بلدك"</h2>
+            <p class="text-muted lead">مبادرة فنية مجتمعية تهدف إلى إحياء التراث المصري وتعزيز الهوية الوطنية</p>
+          </div>
+        </div>
+        
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="card initiative-card">
+              <div class="card-body p-4">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <h4 class="fw-bold text-primary mb-3">#جمل_بلدك</h4>
+                    <p class="text-muted mb-3">
+                      بدأت المبادرة في عام 2012، وتم رسم أكثر من 20 جمل في مختلف أنحاء مدينة العاشر من رمضان، بهدف إضافة لمسة فنية إلى جدران المدن وتعزيز الهوية المصرية.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      <span class="badge bg-primary">فن الشارع</span>
+                      <span class="badge bg-success">مجتمعي</span>
+                      <span class="badge bg-info">تراث مصري</span>
+                      <span class="badge bg-warning text-dark">2012</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                      <i class="bi bi-brush text-white display-6"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card initiative-card h-100">
+              <div class="card-body p-4">
+                <h5 class="fw-bold text-primary mb-3">أهداف المبادرة</h5>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>تعزيز الهوية المصرية والثقافة الشعبية</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>إضافة لمسة فنية إلى جدران المدن</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>تشجيع السياحة والفن في مصر</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>إشراك المجتمع المحلي في الفنون البصرية</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>الرسم على أسوار المدارس</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>الرسم على أكشاك الكهرباء</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="card initiative-card h-100">
+              <div class="card-body p-4">
+                <h5 class="fw-bold text-primary mb-3">إنجازات المبادرة</h5>
+                <div class="row text-center">
+                  <div class="col-6 mb-3">
+                    <div class="h3 fw-bold text-primary">20+</div>
+                    <div class="text-muted">جمل مرسوم</div>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <div class="h3 fw-bold text-primary">10+</div>
+                    <div class="text-muted">سنوات من العطاء</div>
+                  </div>
+                  <div class="col-6">
+                    <div class="h3 fw-bold text-primary">مختلف</div>
+                    <div class="text-muted">أماكن في المدينة</div>
+                  </div>
+                  <div class="col-6">
+                    <div class="h3 fw-bold text-primary">مجتمع</div>
+                    <div class="text-muted">مشارك وفاعل</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Work Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold text-primary mb-3">العمل الحالي</h2>
+            <p class="text-muted lead">يستمر الفنان أيمن الجوهري في العطاء من خلال نادي العلوم</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="card border-0 bg-primary text-white">
+              <div class="card-body p-5">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <h4 class="fw-bold mb-3">نادي العلوم والتدريب الفني</h4>
+                    <p class="mb-4">
+                      يعمل الفنان أيمن الجوهري حالياً في نادي العلوم ويقوم بالتدريب على الرسم والفنون التشكيلية. تتلمذ الكثير على يده من خلال دورات تدريبية لجميع الأعمار، حيث ينقل خبراته الفنية إلى الأجيال الجديدة.
+                    </p>
+                    <a href="./cources.html" class="btn btn-light btn-lg fw-bold">
+                      <i class="bi bi-book me-2"></i>استكشف الدورات
+                    </a>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                      <i class="bi bi-mortarboard-fill text-primary display-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artistic Journey -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold text-primary mb-3">رحلة فنية حافلة</h2>
+            <p class="text-muted lead">محطات متميزة في مسيرة الفنان أيمن الجوهري</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5 class="fw-bold text-primary">بداية المسيرة الفنية</h5>
+                  <p class="text-muted mb-2">أوائل العقد الأول من القرن الحادي والعشرين</p>
+                  <p class="mb-0">بداية المشاركة في المعارض المحلية والدولية وتطوير الأسلوب الفني المميز</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5 class="fw-bold text-primary">إطلاق مبادرة "جمل بلدك"</h5>
+                  <p class="text-muted mb-2">2012</p>
+                  <p class="mb-0">بداية المبادرة المجتمعية التي تهدف إلى تعزيز الهوية المصرية من خلال الفن</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5 class="fw-bold text-primary">التدريب في نادي العلوم</h5>
+                  <p class="text-muted mb-2">العمل الحالي</p>
+                  <p class="mb-0">قيادة ورش العمل والدورات التدريبية لنقل الخبرة إلى الأجيال الجديدة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h3 class="fw-bold text-primary mb-3">مهتم بفنون الفنان أيمن الجوهري؟</h3>
+            <p class="text-muted lead mb-4">انضم إلى دوراته التدريبية وتعلم من خبراته الغنية في مجال الفن التشكيلي</p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <a href="./cources.html" class="btn btn-primary btn-lg fw-bold px-5">
+                <i class="bi bi-book me-2"></i>الدورات المتاحة
+              </a>
+              <a href="./exhibition.html" class="btn btn-outline-primary btn-lg fw-bold px-5">
+                <i class="bi bi-images me-2"></i>استكشف الأعمال
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="./img/logo.png" alt="Logo" width="50" height="50" class="me-3" />
+              <div>
+                <h5 class="fw-bold mb-0">جاليري الفن التشكيلي</h5>
+                <small class="text-light">نادي العلوم</small>
+              </div>
+            </div>
+            <p class="text-light mb-3">
+              يمكنك من مشاهدة نماذج للأعمال الفنية المعروضة في نادي العلوم وتصفحها وتحميلها في جهازك بكل سهولة وسرعة. نقدم دورات فنية متخصصة لتنمية المواهب والإبداع.
+            </p>
+            <p class="text-light mb-0">
+              <i class="bi bi-c-circle me-1"></i>كل الحقوق محفوظة © 2018-2025
+            </p>
+          </div>
+          
+          <div class="col-lg-3 offset-lg-1">
+            <h6 class="fw-bold mb-3">روابط سريعة</h6>
+            <div class="d-flex flex-column gap-2">
+              <a href="./index.html" class="footer-link text-light p-2">الرئيسية</a>
+              <a href="./exhibition.html" class="footer-link text-light p-2">المعرض</a>
+              <a href="./cources.html" class="footer-link text-light p-2">الدورات</a>
+              <a href="./about.html" class="footer-link text-light p-2">عن الفنان</a>
+              <a href="./contact.html" class="footer-link text-light p-2">تواصل معنا</a>
+            </div>
+          </div>
+          
+          <div class="col-lg-4">
+            <h6 class="fw-bold mb-3">تابعنا على</h6>
+            <div class="d-flex gap-3 mb-4">
+              <a href="#" class="btn btn-outline-light rounded-circle p-2 social-btn">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light rounded-circle p-2 social-btn">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light rounded-circle p-2 social-btn">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light rounded-circle p-2 social-btn">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+            <div class="bg-secondary p-3 rounded">
+              <h6 class="fw-bold mb-2">نادي العلوم على فيس بوك</h6>
+              <a href="https://www.facebook.com/10thScienceClub" class="btn btn-outline-light btn-sm w-100" target="_blank">
+                <i class="bi bi-facebook me-2"></i>زيارة الصفحة
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Simple animation for timeline items
+      document.addEventListener('DOMContentLoaded', function() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        timelineItems.forEach(item => {
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(20px)';
+          item.style.transition = 'all 0.6s ease';
+          observer.observe(item);
+        });
+      });
+    </script>
+  </body>
+</html>

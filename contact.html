@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>جاليري الفن التشكيلي / عنا</title>
+    <style>
+      .hero-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      
+      .nav-link {
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+      
+      .nav-link:hover {
+        background-color: #f8f9fa;
+        border-radius: 0.375rem;
+        color: #0d6efd !important;
+      }
+      
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+      
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+      
+      .social-btn {
+        transition: all 0.3s ease;
+      }
+      
+      .social-btn:hover {
+        transform: scale(1.1);
+      }
+      
+      .footer-link {
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border-radius: 0.375rem;
+      }
+      
+      .footer-link:hover {
+        background-color: rgba(255,255,255,0.1);
+        color: #fff !important;
+      }
+      
+      .about-card {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      
+      .about-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+      
+      .mission-section {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      }
+      
+      .value-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+      
+      .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+      
+      .team-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+      
+      .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+    </style>
+  </head>
+
+  <body class="position-relative">
+    <!-- Social Media Floating Button -->
+    <div class="position-fixed top-50 start-0 z-3 m-3 d-flex flex-column gap-3">
+      <button class="btn btn-primary rounded-circle p-3 social-btn" type="button" data-bs-toggle="collapse" data-bs-target="#socialCollapse">
+        <i class="bi bi-share-fill fs-5"></i>
+      </button>
+      <div class="collapse" id="socialCollapse">
+        <div class="d-flex flex-column gap-2">
+          <a href="#" class="btn btn-outline-primary rounded-circle p-2 social-btn">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-outline-info rounded-circle p-2 social-btn">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="#" class="btn btn-outline-primary rounded-circle p-2 social-btn">
+            <i class="bi bi-telegram"></i>
+          </a>
+          <a href="#" class="btn btn-outline-danger rounded-circle p-2 social-btn">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="./index.html">
+          <img src="./img/logo.png" alt="logo" width="50" height="50" class="me-2" />
+          <span class="fw-bold text-primary">جاليري الفن التشكيلي</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./index.html">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./exhibition.html">المعرض</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./cources.html">الدورات المتاحة</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="https://www.facebook.com/10thScienceClub" target="_blank">
+                نادي العلوم على فيس بوك
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./about.html">عن الفنان أيمن الجوهري</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./contact.html">تواصل معنا</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="./cources.html" class="btn btn-outline-primary me-2">
+              سجل في الدورات
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white" style="padding-top: 100px;">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="text-center text-lg-start">
+              <h1 class="display-4 fw-bold mb-4">عن جاليري الفن التشكيلي</h1>
+              <p class="lead mb-4">واحة إبداعية تجمع بين التراث والحداثة، نسعى لنشر الثقافة الفنية وتنمية المواهب في المجتمع</p>
+              <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                <a href="#mission" class="btn btn-light btn-lg fw-bold px-4">
+                  <i class="bi bi-bullseye me-2"></i>رسالتنا
+                </a>
+                <a href="./exhibition.html" class="btn btn-outline-light btn-lg fw-bold px-4">
+                  <i class="bi bi-images me-2"></i>استكشف المعرض
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div class="feature-icon">
+              <i class="bi bi-building text-white display-6"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Gallery Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="card about-card border-0">
+              <div class="card-body p-4">
+                <h2 class="fw-bold text-primary mb-4">نشأة الجاليري</h2>
+                <p class="text-muted mb-4">
+                  تأسس جاليري الفن التشكيلي تحت مظلة نادي العلوم، كمبادرة تهدف إلى دعم الفنون البصرية وتشجيع المواهب المحلية. منذ انطلاقته، أصبح الجاليري منصة مهمة للفنانين والمهتمين بالفن التشكيلي.
+                </p>
+                <p class="text-muted mb-4">
+                  نعمل على تقديم بيئة محفزة للإبداع، حيث نجمع بين الأصالة الفنية والرؤى المعاصرة، ونسعى لجعل الفن في متناول الجميع من خلال معارضنا ودوراتنا التدريبية.
+                </p>
+                <div class="row text-center">
+                  <div class="col-4">
+                    <div class="h3 fw-bold text-primary">5+</div>
+                    <div class="text-muted small">سنوات من العطاء</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="h3 fw-bold text-primary">150+</div>
+                    <div class="text-muted small">عمل فني معروض</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="h3 fw-bold text-primary">500+</div>
+                    <div class="text-muted small">متدرب في الدورات</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ps-lg-5">
+              <img src="./img/gallery-space.jpg" alt="مساحة الجاليري" class="img-fluid rounded-3 shadow" style="height: 400px; width: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission" class="mission-section text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card about-card h-100">
+              <div class="card-body p-4">
+                <div class="feature-icon">
+                  <i class="bi bi-bullseye text-primary display-6"></i>
+                </div>
+                <h3 class="fw-bold text-primary mb-3">رسالتنا</h3>
+                <p class="text-muted">
+                  نسعى إلى نشر الثقافة الفنية وتنمية الوعي الجمالي في المجتمع، من خلال تقديم أعمال فنية متميزة وتوفير بيئة محفزة للإبداع والتعلم. نهدف إلى جعل الفن التشكيلي في متناول الجميع وإحياء التراث الفني المصري.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card about-card h-100">
+              <div class="card-body p-4">
+                <div class="feature-icon">
+                  <i class="bi bi-eye text-primary display-6"></i>
+                </div>
+                <h3 class="fw-bold text-primary mb-3">رؤيتنا</h3>
+                <p class="text-muted">
+                  أن نكون الوجهة الأولى للفن التشكيلي في المنطقة، منصة رائدة في اكتشاف المواهب ودعم الفنانين، ومرجعاً مهماً للباحثين عن الجمال والإبداع. نطمح لبناء مجتمع فاعي بالفنون يساهم في إثراء المشهد الثقافي.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold text-primary mb-3">قيمنا الأساسية</h2>
+            <p class="text-muted lead">المبادئ التي توجه عملنا وتميز هويتنا</p>
+          </div>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="value-card">
+              <div class="feature-icon">
+                <i class="bi bi-heart-fill text-white display-6"></i>
+              </div>
+              <h4 class="fw-bold text-primary mb-3">الإبداع</h4>
+              <p class="text-muted">نشجع التفكير الإبداعي ونقدم مساحة للتجريب والابتكار في مختلف أشكال التعبير الفني.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="value-card">
+              <div class="feature-icon">
+                <i class="bi bi-people-fill text-white display-6"></i>
+              </div>
+              <h4 class="fw-bold text-primary mb-3">المشاركة المجتمعية</h4>
+              <p class="text-muted">نؤمن بدور الفن في بناء المجتمعات ونسعى لإشراك مختلف فئات المجتمع في الفعاليات الفنية.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="value-card">
+              <div class="feature-icon">
+                <i class="bi bi-award-fill text-white display-6"></i>
+              </div>
+              <h4 class="fw-bold text-primary mb-3">الجودة</h4>
+              <p class="text-muted">نلتزم بأعلى معايير الجودة في تقديم الأعمال الفنية والبرامج التدريبية والخدمات.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold text-primary mb-3">خدماتنا</h2>
+            <p class="text-muted lead">نقدم مجموعة متنوعة من الخدمات الفنية والتدريبية</p>
+          </div>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card about-card h-100 text-center">
+              <div class="card-body p-4">
+                <div class="feature-icon">
+                  <i class="bi bi-images text-white display-6"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-3">المعارض الفنية</h5>
+                <p class="text-muted">تنظيم معارض دائمة ومؤقتة لعرض الأعمال الفنية المتميزة للفنانين المحليين والدوليين.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card about-card h-100 text-center">
+              <div class="card-body p-4">
+                <div class="feature-icon">
+                  <i class="bi bi-book text-white display-6"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-3">الدورات التدريبية</h5>
+                <p class="text-muted">برامج تدريبية متخصصة في مختلف تقنيات الرسم والفن التشكيلي لجميع المستويات.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card about-card h-100 text-center">
+              <div class="card-body p-4">
+                <div class="feature-icon">
+                  <i class="bi bi-brush text-white display-6"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-3">ورش العمل</h5>
+                <p class="text-muted">ورش عمل مكثفة وحلقات نقاشية مع فنانين محترفين لتطوير المهارات الفنية.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card about-card h-100 text-center">
+              <div class="card-body p-4">
+                <div class="feature-icon">
+                  <i class="bi bi-megaphone text-white display-6"></i>
+                </div>
+                <h5 class="fw-bold text-primary mb-3">الفعاليات الثقافية</h5>
+                <p class="text-muted">تنظيم محاضرات ولقاءات ثقافية وأمسيات فنية لإثراء المشهد الثقافي.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Science Club Partnership -->
+    <section class="py-5 bg-primary text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-3">شراكتنا مع نادي العلوم</h2>
+            <p class="lead mb-4">
+              يعمل الجاليري تحت مظلة نادي العلوم، مما يمكننا من الاستفادة من البنية التحتية والخبرات المتراكمة في تقديم خدماتنا الفنية والتدريبية. هذه الشراكة تتيح لنا الوصول إلى جمهور أوسع وتقديم برامج متكاملة تجمع بين العلم والفن.
+            </p>
+            <a href="https://www.facebook.com/10thScienceClub" class="btn btn-light btn-lg fw-bold" target="_blank">
+              <i class="bi bi-facebook me-2"></i>تعرف على نادي العلوم
+            </a>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div class="bg-white rounded-3 p-4">
+              <i class="bi bi-cpu-fill text-primary display-1"></i>
+              <h5 class="text-primary mt-3 fw-bold">نادي العلوم</h5>
+              <p class="text-muted mb-0">شريكنا في الإبداع</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h3 class="fw-bold text-primary mb-3">انضم إلى مجتمعنا الفني</h3>
+            <p class="text-muted lead mb-4">سجل في دوراتنا أو زور معرضنا لتجربة فنية فريدة</p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <a href="./cources.html" class="btn btn-primary btn-lg fw-bold px-5">
+                <i class="bi bi-book me-2"></i>سجل في الدورات
+              </a>
+              <a href="./contact.html" class="btn btn-outline-primary btn-lg fw-bold px-5">
+                <i class="bi bi-envelope me-2"></i>تواصل معنا
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="./img/logo.png" alt="Logo" width="50" height="50" class="me-3" />
+              <div>
+                <h5 class="fw-bold mb-0">جاليري الفن التشكيلي</h5>
+                <small class="text-light">نادي العلوم</small>
+              </div>
+            </div>
+            <p class="text-light mb-3">
+              يمكنك من مشاهدة نماذج للأعمال الفنية المعروضة في نادي العلوم وتصفحها وتحميلها في جهازك بكل سهولة وسرعة. نقدم دورات فنية متخصصة لتنمية المواهب والإبداع.
+            </p>
+            <p class="text-light mb-0">
+              <i class="bi bi-c-circle me-1"></i>كل الحقوق محفوظة © 2018-2025
+            </p>
+          </div>
+          
+          <div class="col-lg-3 offset-lg-1">
+            <h6 class="fw-bold mb-3">روابط سريعة</h6>
+            <div class="d-flex flex-column gap-2">
+              <a href="./index.html" class="footer-link text-light p-2">الرئيسية</a>
+              <a href="./exhibition.html" class="footer-link text-light p-2">المعرض</a>
+              <a href="./cources.html" class="footer-link text-light p-2">الدورات</a>
+              <a href="./about-artist.html" class="footer-link text-light p-2">عن الفنان</a>
+              <a href="./about.html" class="footer-link text-light p-2">عن الجاليري</a>
+              <a href="./contact.html" class="footer-link text-light p-2">تواصل معنا</a>
+            </div>
+          </div>
+          
+          <div class="col-lg-4">
+            <h6 class="fw-bold mb-3">تابعنا على</h6>
+            <div class="d-flex gap-3 mb-4">
+              <a href="#" class="btn btn-outline-light rounded-circle p-2 social-btn">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light rounded-circle p-2 social-btn">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light rounded-circle p-2 social-btn">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light rounded-circle p-2 social-btn">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+            <div class="bg-secondary p-3 rounded">
+              <h6 class="fw-bold mb-2">نادي العلوم على فيس بوك</h6>
+              <a href="https://www.facebook.com/10thScienceClub" class="btn btn-outline-light btn-sm w-100" target="_blank">
+                <i class="bi bi-facebook me-2"></i>زيارة الصفحة
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
